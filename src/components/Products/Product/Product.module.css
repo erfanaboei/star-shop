@@ -9,7 +9,7 @@
     padding-bottom: 20px;
     margin-right: 5px;
     border-radius: 5px;
-    background: linear-gradient(to right,rgba(61, 61, 61, 0.8),rgba(179, 178, 178, 0.8)),url("../../../assets/ProductBackground/ProductBackground.png");
+    background: linear-gradient(to left,rgba(80, 29, 29, 0.6),rgba(136, 4, 4, 0.6)),url("../../../assets/ProductBackground/ProductBackground.jpg");
     background-size: cover;
 }
 .ProductCard a{
@@ -84,7 +84,7 @@
     float: right;
 }
 .ProductCard:hover{
-    box-shadow: 3px 8px 9px #ccc;
+    box-shadow: 1px 2px 12px rgba(185, 40, 40, 0.623);
 }
 .PlusAndMinus span{
     font-size: 20px;

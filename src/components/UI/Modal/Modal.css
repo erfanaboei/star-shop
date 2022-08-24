@@ -1,7 +1,7 @@
 .Modal  {
     position: fixed;
     z-index: 500;
-    background: linear-gradient(to right,    rgba(177, 177, 177, 0.788),rgba(255, 255, 255, 0.8)),url("../../../assets/ModalBackground/ModalBackground.jpg");
+    background: linear-gradient(to right,    rgba(56, 56, 56, 0.788),rgba(160, 160, 160, 0.8)),url("../../../assets/ModalBackground/ModalBackground.jpg");
     width: 70%;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 5px #ccc;

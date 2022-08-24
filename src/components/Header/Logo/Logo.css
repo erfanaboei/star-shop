@@ -1,11 +1,10 @@
 .Logo{
-    padding: 8px;
     height: 100%;
     box-sizing: border-box;
     border-radius: 5px;
     float: right;
 }
 .Logo img{
-    height:50px;
-    width: 100px;
+    width: 100%;
+    height: 100%;
 }

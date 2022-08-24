@@ -30,7 +30,7 @@
   border-radius: 50%;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #2b2b2b ;
+  background-color: #e60909a6 ;
   border-color: #050505;
   outline: none ;
 }

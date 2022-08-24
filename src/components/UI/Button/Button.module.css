@@ -10,7 +10,7 @@
 }
 .Button:hover{
     transition: 0.3s;
-    box-shadow: 3px 5px 2px #ccc;
+    box-shadow: 1px 2px 15px #ccc;
 }
 /* .Button:first-of-type{
     margin-left: 0;
@@ -31,12 +31,15 @@
 }
 .Success:hover{
     background-color:rgba(36, 207, 36, 0.863);
+    box-shadow: 1px 2px 15px rgba(36, 207, 36, 0.863);
 }
 .Pramary{
     background-color: rgb(12, 66, 136);
 }
 .Pramary:hover{
     background-color: rgb(19, 112, 233);
+    box-shadow: 1px 2px 15px rgb(19, 112, 233);
+
 }
 .Close{
     background-color: transparent;

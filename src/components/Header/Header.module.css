@@ -10,7 +10,7 @@
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 90;
-    background: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(165, 164, 164, 0.8)),url("../../../public/assets//Background/cool-background.png");
+    background: linear-gradient(to right,rgba(121, 5, 5, 0.6),rgba(0, 0, 0, 0.6)),url("../../../public/assets//Background/cool-background.png");
     background-size: cover; 
 }
 .HRight{
