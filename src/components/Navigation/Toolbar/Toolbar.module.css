@@ -1,0 +1,26 @@
+.Toolbar {
+    margin-top: 56px;
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+    box-shadow: 1px 2px 3px #ccc;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(165, 164, 164, 0.8)),url("../../../../public/assets//Background/cool-background.png");
+    background-size: cover;
+}
+.Toolbar nav{
+    width: 100%;
+}
+
+@media (max-width:499px){
+    .DesktopOnly{
+        display: none;
+    }
+}

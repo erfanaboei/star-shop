@@ -1,0 +1,100 @@
+
+footer{
+    color: white;
+    border-top: 1px solid #cecece;
+    width: 100%;
+    margin-top: 20px;    
+}
+.TopFooter{
+    display: flex;
+}
+.ImageBox{
+    width: 50%;
+    margin-top:10px;
+}
+.ImageBox img{
+    height:50px;
+    width: 100px;   
+}
+.GoTopPageBox{
+    width: 50%;
+    margin-top:10px;
+}
+.GoTopPageBox button{
+    color: white;
+    float: left;
+    background-color: transparent;
+    border: 1px solid #cecece;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.GoTopPageBox button i {
+    margin-right: 10px;
+}
+.BottomFooter{
+    display: flex;
+}
+.BottomFooter a{
+    text-decoration: none;
+    color: #e2e2e2;
+    display: block;
+    margin: 5px 0 0 0;
+}
+.BottomFooter a:hover{
+    color: black;
+    transition: 0.5s;
+}
+.WithStarshopBox{
+    width: 25%;
+}
+.CustomerServicesBox{
+    width: 25%;
+}
+.ShoppingGuideBox{
+    width: 25%;
+}
+.ContactUsBox{
+    width: 25%;
+}
+.VirtualPages{
+    display: flex;
+    width: 100%;
+}
+.VirtualPages a{
+    display: inline-block;
+    margin-left: 35px;
+}
+.InputBox{
+    width: 100%;
+}
+.InputBox input[type="text"]{
+    font-family: "B Yekan";
+    width: 70%;
+    height: 40px;
+    margin-left: 5px;
+    padding: 0;
+    background-color: #cecece;
+    border: 1px solid rgb(128, 127, 127);
+    border-radius: 8px;
+}
+.InputBox input[type="text"]:focus{
+    transition: 0.5s;
+    background-color: white;
+    outline: none;
+}
+.InputBox button{
+    font-family: "B Yekan";
+    width: 20%;
+    height: 40px;
+    padding: 0;
+    background-color: #a8a8a7;
+    color: white;
+    border: 1px solid rgb(128, 127, 127);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.InputBox button:hover{
+    box-shadow: 1px 1px 5px rgb(128, 127, 127);
+    transition: 0.5s;
+}

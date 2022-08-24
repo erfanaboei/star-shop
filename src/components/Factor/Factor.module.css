@@ -1,0 +1,53 @@
+.Factor{
+    margin: auto;
+    margin-top: 130px;
+    text-align: center;
+    align-items: center;
+}
+.SellerDetailsBox{
+    float: right;
+    width: 33.33%;
+}
+.CustomerDetailsBox{
+    width: 33.33%;
+}
+.DateBox{
+    float: left;
+    width: 33.33%;
+}
+.FactorTable{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: "b yekan";
+    min-width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+
+}
+.FactorTable thead tr{
+    background-color: black;
+    color: #ffffff;
+}
+.FactorTable th,
+.FactorTable td{
+    padding: 12px ;
+}
+.FactorTable tbody tr{
+    border-bottom: 1px solid #cacaca;
+}
+.FactorHeader{
+    display: flex;
+}
+#btnPrint{
+    background-color: rgb(14, 80, 204);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#btnPrint:hover{
+    box-shadow:2px 3px 10px rgb(0, 101, 252);
+    transition: 0.5s;
+}

@@ -1,0 +1,40 @@
+.Paging{
+    width: 100%;
+    margin-top: 20px;    
+    background-color: transparent;
+    display: flex;
+    
+}
+.FirstPage{
+    width: 33%;
+    float: right;
+}
+.LastPage{
+    width: 33%;
+    float: left;
+}
+.LastPage Button{
+    float: left;
+}
+.Previous i{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.PageNumber{
+    width: 33%;
+    text-align: center;
+    margin: auto;
+}
+
+.Next Button{
+    float: left;
+}
+.Next i{
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.active{
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,107 @@
+.CartProduct{
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+}
+.ImageBox , .ImageBox img{
+    max-width: 114px;
+}
+.ImageBox{
+    margin-left:20px ;
+    align-items: center;
+}
+.ImageBox img{
+    border-radius: 5px;
+}
+.ProductDetailsItemTop{
+    margin-top: 10px;
+    display: flex;
+}
+.ProductDetailsItemBottom{
+    display: flex;
+}
+.PlusAndMinusBox{
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    color: red;
+    margin-bottom:5px ;
+    margin-left: 20px;
+    width: 114px;
+    max-width: 114px;
+}
+.Plus{
+    float: right;
+    width: 33%;
+    margin: 5px;
+}
+.Plus span{
+    float: right;
+}
+.Minus{
+    float: left;
+    width: 33%;
+    margin: 5px;
+}
+.Minus span{
+    float: left;
+}
+.Count{
+    align-items: center;
+    width: 33%;
+    margin: 5px;
+}
+.PriceDiscount{
+    color: red;
+    font-size: small;
+}
+.Title{
+    font-size: 20px !important;
+    font-weight: bold;
+}
+.DetailsBox span{
+    font-size: small;
+}
+.DeleteBox button{
+    background-color: transparent;
+    color:red;
+    border: none;
+    cursor: pointer;
+}
+.DeleteBox{
+    width: 100%
+}
+#btnDelete{
+    float: left;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+#btnDelete:hover{
+    color: white;
+    background-color: red;
+    transition: 0.5s;
+
+}
+.ProductDetailsFotter{
+    float: left;
+}
+.ProductDetailsFotter button{
+    float: left;
+    color: rgb(0, 140, 255);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#btnPlus{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+#btnMinus{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+}

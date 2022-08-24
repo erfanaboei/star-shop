@@ -1,0 +1,71 @@
+.Button{
+    font-family: 'B Yekan';
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.Button:hover{
+    transition: 0.3s;
+    box-shadow: 3px 5px 2px #ccc;
+}
+/* .Button:first-of-type{
+    margin-left: 0;
+    padding-left:0;
+} */
+.Success{
+    background-color: rgb(7, 107, 37);
+}
+
+.Danger{
+    background-color:red;
+}
+.btnAddToCart{
+    width: 80%;
+}
+.btnContinue{
+    width: 100%;
+}
+.Success:hover{
+    background-color:rgba(36, 207, 36, 0.863);
+}
+.Pramary{
+    background-color: rgb(12, 66, 136);
+}
+.Pramary:hover{
+    background-color: rgb(19, 112, 233);
+}
+.Close{
+    background-color: transparent;
+    color: black;
+    padding: 4px 8px;
+}
+
+.Close:hover{
+    box-shadow: 0px 0px 0px;
+    background-color: rgba(196, 26, 26, 0.836);
+    transform: 0.3s;
+    color: white;
+}
+.displayNone{
+    display: none;
+}
+.displayInlineBlock{
+    display: inline-block;
+}
+.btnPaging{
+    background-color: transparent;
+    border-radius: 100px;
+    color: black;
+}
+.btnPaging:hover{
+    box-shadow: 0px 0px 0px;
+    border: 1.5px solid rgb(43, 43, 43);
+}
+.btnPagingActive{
+    background-color: black;
+    color: white;
+}

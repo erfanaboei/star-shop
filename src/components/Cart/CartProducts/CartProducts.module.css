@@ -1,0 +1,19 @@
+.CartProducts{
+    margin: 15px;
+}
+.CartProductsHeader h3 , .CartProductsHeader span{
+    margin: 0;
+}
+.CartProductsHeader{
+    display: flex;
+    /* border-bottom: 1px solid #ccc;
+    margin-bottom: 10px; */
+}
+.CartProductsHeader .Right{
+    width: 50%;
+    float: right;
+}
+.CartProductsHeader .Left{
+    width: 50%;
+    float: left;
+}

@@ -1,0 +1,35 @@
+.Cart{
+    width: 100%;
+    margin:auto ;
+    display: flex;
+}
+
+.CartDetails{
+    width: 70%;
+    /* margin: 20px auto; */
+    margin-left: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 8px;
+
+}
+.CartPayment{
+    /* margin: 20px auto; */
+    width: 30%;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 8px;
+    max-height: 260px;
+}
+.cartNull{
+    text-align: center;
+    width: 100%;
+}
+.cartNull a{
+    text-decoration: none;
+    color: rgb(34, 167, 167);
+    font-size: 20px;
+}
+.cartNull a:hover{
+    transition: 0.3s;
+    color: rgb(0, 107, 107);
+}
+

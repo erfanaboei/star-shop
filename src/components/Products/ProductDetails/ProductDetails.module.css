@@ -1,0 +1,98 @@
+.ProductDetails{
+    align-items: center;
+    padding: 0;
+}
+.Box{
+    display: inline-block;
+    margin: 0 3px;
+    height: 100%;
+}
+.Box hr{
+    border-style: solid;
+}
+.ImageBox{
+    margin-right: 0;
+    width: 35%;
+    display: inline-block;
+    border-left: 1px solid rgb(105, 105, 105);
+    padding-left: 8px;
+}
+.ImageBox img{
+    margin: 8px 8px 0;
+    border-radius: 4px;
+}
+.DetailsBox{
+    margin: 8px;
+    width: 35%;
+    display: inline-block;
+}
+.PaymentBox{
+    margin-left: 0;
+    width: 27%;
+    height: 100%;
+    display: inline-block;
+    align-items: center;
+    border-right: 1px solid rgb(105, 105, 105);
+}
+.PaymentBox hr{
+    border: 1px solid rgb(105, 105, 105);
+
+}   
+.Title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.ShortDescription{
+    margin-bottom: 0;
+}
+.ProductDiscount{
+    margin: 0 5px;
+}
+.TotalPrice{
+    float: left;
+}
+.Discount{
+    display: inline-block;
+    background-color: rgb(223, 30, 94);
+    color: white;
+    border-radius: 60px;
+    padding: 0 3px;
+}
+.OldPrice{
+    display: inline-block;
+    margin: 0 5px;
+}
+.ProductPrice{
+    margin: 0 5px;
+}
+.PlusAndMinus{
+    text-align: center;
+    display: block;
+    margin-top: 25px;
+}
+.PlusAndMinus p{
+    padding: 10px;
+
+}
+.btnSuccess{
+    color: green;
+    font-size: 30px;
+    background-color: transparent;
+    float: left;
+}
+.btnDanger{
+    color: red;
+    font-size: 30px;
+    background-color: transparent;
+    float: right;
+}
+.PlusAndMinus button{
+    border: none;
+    cursor: pointer;
+}
+.PaymentBoxDetails{
+    margin: 11.5px 8px;
+}
+.AddToFavorites {
+    cursor: pointer;
+}

@@ -1,0 +1,5 @@
+html{
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(165, 164, 164, 0.8)),url("./assets/Background/cool-background.png");
+    background-size: cover;
+    color: rgb(216, 216, 216);
+}

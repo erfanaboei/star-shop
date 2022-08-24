@@ -1,0 +1,27 @@
+.SearchBox{
+    float: right;
+    width: 40%;
+    /* margin: 15px; */
+}
+.Input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.InputElement{
+    outline: none;
+    border:1px solid #ccc;
+    background-color: #ccc;
+    font: "B Yekan";
+    padding: 5px 10px;
+    display: block;
+    width:400px; 
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.InputElement:focus{
+    outline: none;
+    background-color: white;
+}

@@ -1,0 +1,17 @@
+.Toolbar{
+    display: flex;
+    width: 100%;
+    
+}
+.Toolbar a{
+    text-decoration: none;
+    color: white;
+    margin: 8px;
+}
+.Toolbar a:hover{
+    color:black;
+    transition: 0.5s;
+}
+.Content{
+    text-align: justify;
+}

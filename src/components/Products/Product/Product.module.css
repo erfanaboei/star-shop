@@ -1,0 +1,91 @@
+.ProductCard{
+    width: 24.5%;
+    align-items: center;
+    box-sizing: border-box;
+    transition: 0.3s;
+    display: inline-block;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right,rgba(61, 61, 61, 0.8),rgba(179, 178, 178, 0.8)),url("../../../assets/ProductBackground/ProductBackground.png");
+    background-size: cover;
+}
+.ProductCard a{
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}
+.ProductDetails{
+    padding: 10px 16px;
+}
+.ProductCard img{
+    width: 100%;
+    max-height: 350px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.ProductRating .Left{
+    float: left;
+}
+.ProductRating .Right{
+    cursor: pointer;
+}
+.ProductRating i {
+    margin: 0 8px;
+}
+.PriceBox .ProductPrice{
+    float: left;
+}
+.ProductDiscount{
+    float: right;
+    background-color: rgb(223, 30, 94);
+    color: white;
+    border-radius: 60px;
+    padding: 0 5px;
+}
+.Plus{
+    font-size: 35px;
+    color: green;
+    cursor: pointer;
+    float: left;
+}
+.Minus{
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+    float: right;
+    
+}
+.PlusAndMinus{
+    text-align: center;
+}
+.PlusAndMinus p {
+    box-shadow: 3px 3px 20px #ccc;
+    border: 1px solid #cece;
+    border-radius: 10px;
+    max-height: 160px !important;
+}
+.PlusAndMinus button{
+    border: none;
+    cursor: pointer;
+}
+.btnSuccess{
+    color: green;
+    font-size: 30px;
+    background-color: transparent;
+    float: left;
+}
+.btnDanger{
+    color: red;
+    font-size: 30px;
+    background-color: transparent;
+    float: right;
+}
+.ProductCard:hover{
+    box-shadow: 3px 8px 9px #ccc;
+}
+.PlusAndMinus span{
+    font-size: 20px;
+}
