@@ -16,12 +16,12 @@
 .pagination .next{
   border-radius: 50%;
 }
-.pagination > .active > a{
+/* .pagination > .active > a{
   background-color: #2b2b2b ;
   border-color: #050505 ;
   color: #fff;
 
-}
+} */
 .pagination > li > a{
   padding: 5px 10px;
   outline: none;
@@ -29,14 +29,14 @@
   margin: 5px;
   border-radius: 50%;
 }
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #e60909a6 ;
+/* .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #050505 ;
   border-color: #050505;
   outline: none ;
 }
 .pagination > li > a, .pagination > li > span{
-  color: #fafafa
-}
+  color: #050505
+} */
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
   border-radius: unset
 }

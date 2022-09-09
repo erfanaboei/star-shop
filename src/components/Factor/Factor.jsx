@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Factor.module.css";
+// import classes from "./Factor.module.css";
 import miladi_be_shamsi from "../../Utilities/DateConvertor";
 import { useCart, useCartAction } from "../../context/CartContext";
 import ProdutcsData from "./../Products/ProductsData";
@@ -25,30 +25,30 @@ function Factor(props) {
 
       totalPrice += currentProductTotalPrice;
       tableTR.push(
-        <tr key={index}>
-          <td>{p.id}</td>
-          <td>{p.title}</td>
-          <td>{currentProductCount(p.id)}</td>
-          <td>{Separate(p.price)}</td>
-          <td>{Separate(discountPrice)}</td>
-          <td>{Separate(totalDiscountPrice)}</td>
-          <td>{Separate(currentProductTotalPrice)}</td>
+        <tr className="border-b border-slate-400" key={index}>
+          <td className="p-3">{p.id}</td>
+          <td className="p-3">{p.title}</td>
+          <td className="p-3">{currentProductCount(p.id)}</td>
+          <td className="p-3">{Separate(p.price)}</td>
+          <td className="p-3">{Separate(discountPrice)}</td>
+          <td className="p-3">{Separate(totalDiscountPrice)}</td>
+          <td className="p-3">{Separate(currentProductTotalPrice)}</td>
         </tr>
       );
     });
     table = (
       <>
-        <div className={classes.FactorHeader}>
-          <div className={classes.SellerDetailsBox}>
-            <p>فروشنده : فرشگاه ستاره</p>
-            <p>آدرس فروشگاه : یزد خیابان کاشانی جنب پمپ بنزین</p>
+        <div className="grid grid-cols-1 justify-between md:grid-cols-3 md:items-start">
+          <div className="text-start md:mx-auto">
+            <p className="text-lg text-slate-400">فروشنده : فرشگاه ستاره</p>
+            <p className="text-lg text-slate-400">آدرس فروشگاه : یزد خیابان کاشانی جنب پمپ بنزین</p>
           </div>
-          <div className={classes.CustomerDetailsBox}>
-            <p>مشتری : عرفان ابوئی مهریزی</p>
-            <p>تلفن همراه مشتری : 09140743840</p>
+          <div className="text-start md:mx-auto">
+            <p className="text-lg text-slate-400">مشتری : عرفان ابوئی مهریزی</p>
+            <p className="text-lg text-slate-400">تلفن همراه مشتری : 09140743840</p>
           </div>
-          <div className={classes.DateBox}>
-            <p>
+          <div className="text-start md:mx-auto">
+            <p className="text-lg text-slate-400">
               تاریخ صدور فاکتور :{" "}
               {miladi_be_shamsi(
                 date.getFullYear(),
@@ -56,61 +56,45 @@ function Factor(props) {
                 date.getDate()
               )}
             </p>
-            <p>شماره فاکتور : {252525}</p>
+            <p className="text-lg text-slate-400">شماره فاکتور : {252525}</p>
           </div>
         </div>
-        <table className={classes.FactorTable}>
-          <thead>
-            <tr>
-              <th>ردیف</th>
-              <th>نام کالا</th>
-              <th>تعداد</th>
-              <th>قیمت واحد</th>
-              <th>تخفیف واحد</th>
-              <th>تخفیف</th>
-              <th>مبلغ</th>
+        <table className="text-slate-300 w-full shadow-lg border-collapse my-6 text-[1rem]">
+          <thead className="bg-zinc-900">
+            <tr className="border-b border-slate-400">
+              <th className="p-3">ردیف</th>
+              <th className="p-3">نام کالا</th>
+              <th className="p-3">تعداد</th>
+              <th className="p-3">قیمت واحد</th>
+              <th className="p-3">تخفیف واحد</th>
+              <th className="p-3">تخفیف</th>
+              <th className="p-3">مبلغ</th>
             </tr>
           </thead>
           <tbody>
             {tableTR}
-            {/* <tr>
-            <td>1</td>
-            <td>کیک ماربل</td>
-            <td>5</td>
-            <td>15000</td>
-            <td>6000</td>
-            <td>100000</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>کیک شکلاتی</td>
-            <td>8</td>
-            <td>15000</td>
-            <td>6000</td>
-            <td>100000</td>
-          </tr> */}
           </tbody>
           <tfoot>
-            <tr>
-              <td colSpan={6}>جمع کل مبلغ</td>
-              <td>{Separate(totalPrice)}</td>
+            <tr className="border-b border-slate-400">
+              <td className="p-3" colSpan={6}>جمع کل مبلغ</td>
+              <td className="p-3">{Separate(totalPrice)}</td>
             </tr>
           </tfoot>
         </table>
-        <div className={classes.FactorFooter}>
-          <button id={classes.btnPrint} onClick={() => window.print()}>
+        <div className="">
+          <button className="p-2" onClick={() => window.print()}>
             چاپ فاکتور
           </button>
         </div>
       </>
     );
   } else {
-    table = <p>فاکتوری برای صدور یافت نشد</p>;
+    table = <p className="text-3xl font-bold">فاکتوری برای صدور یافت نشد</p>;
   }
 
   return (
     <>
-      <div className={classes.Factor}>{table}</div>
+      <div className="m-auto text-center">{table}</div>
     </>
   );
 }

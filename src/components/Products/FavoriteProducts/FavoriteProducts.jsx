@@ -55,7 +55,7 @@ function FavoriteProducts(props) {
     });
   } else {
     favoriteProduct = (
-      <p className={classes.FavoriteIsNull}>
+      <p className="text-center text-3xl font-bold py-4 col-span-4">
         لیست علاقه مندی های شما خالی است!
       </p>
     );
@@ -87,8 +87,10 @@ function FavoriteProducts(props) {
   }
   return (
     <>
-      <div className="FavoriteProducts">
-        {favoriteProduct}
+      <div className="">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {favoriteProduct}
+        </div>
         <Modal
           show={isShowModal}
           modalClose={toggleModalHandler}

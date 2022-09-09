@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Product.module.css";
-import Button from "../../UI/Button/Button";
+// import Button from "../../UI/Button/Button";
 import { useFavorite } from "../../../context/FavoriteContext";
 import { useCartAction } from "../../../context/CartContext";
 import Separate from "./../../../Utilities/Separate";
 import LoadingSpinner from "./../../UI/LoadingSpinner/LoadingSpinner";
 import { NavLink } from "react-router-dom";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { MdOutlineStarRate } from "react-icons/md";
 function Product(props) {
-  const [plusAndMinusDisplay, setPlusAndMinusDisplay] = useState("none");
-  const [btnAddToCartDisplay, setBtnAddToCartDisplay] =
-    useState("displayInlineBlock");
+  const [showplusAndMinus, setShowPlusAndMinus] = useState(false);
+  const [showBtnAddToCart, setShowBtnAddToCart] = useState(false);
 
   // console.log("<Product/> rendered"  );
 
@@ -22,20 +23,24 @@ function Product(props) {
   } = useCartAction();
 
   const favorite = useFavorite();
-  let favoriteIcon = "fa fa-heart-o";
+  let favoriteIcon = (
+    <AiOutlineHeart className="text-2xl ml-2 cursor-pointer" />
+  );
   if (favorite.includes(props.id)) {
-    favoriteIcon = "fa fa-heart";
+    favoriteIcon = (
+      <AiFillHeart className="text-2xl ml-2 text-red-600 cursor-pointer" />
+    );
   } else {
-    favoriteIcon = "fa fa-heart-o";
+    favoriteIcon = <AiOutlineHeart className="text-2xl ml-2 cursor-pointer" />;
   }
 
   useEffect(() => {
     if (currentProductCount(props.id) >= 1) {
-      setPlusAndMinusDisplay("block");
-      setBtnAddToCartDisplay("displayNone");
+      setShowPlusAndMinus(true);
+      setShowBtnAddToCart(false);
     } else {
-      setPlusAndMinusDisplay("none");
-      setBtnAddToCartDisplay("displayInlineBlock");
+      setShowPlusAndMinus(false);
+      setShowBtnAddToCart(true);
     }
   });
 
@@ -46,7 +51,9 @@ function Product(props) {
   if (props.productDiscount !== 0) {
     discount = (
       <>
-        <p className={classes.ProductDiscount}>{props.productDiscount}%</p>
+        <p className="bg-red-500 inline-block rounded-xl px-2 float-right">
+          {props.productDiscount}%
+        </p>
       </>
     );
     let discountPrice = (props.productPrice * props.productDiscount) / 100;
@@ -66,41 +73,49 @@ function Product(props) {
       {!props.loaded ? (
         <LoadingSpinner />
       ) : (
-        <div className={classes.ProductCard} onClick={props.clicked}>
-          <img src={props.imgSrc} alt="" onClick={props.imgClicked} />
-          <div className={classes.ProductDetails}>
-            <div className={classes.ProductTitle}>
-              <NavLink to={`product-page/${props.id}`}>
-                <p>{props.productTitle}</p>
+        <div
+          className={[
+            "mb-4 pb-2 mx-1 rounded-md transition-all shadow-lg hover:shadow-zinc-400",
+          ].join(" ")}
+          onClick={props.clicked}
+        >
+          <img
+            className="w-full rounded-t-md cursor-pointer"
+            src={props.imgSrc}
+            alt=""
+            onClick={props.imgClicked}
+          />
+          <div className="px-5 py-4">
+            <div className="">
+              <NavLink className="" to={`product-page/${props.id}`}>
+                <p className="my-2 text-lg font-bold">{props.productTitle}</p>
               </NavLink>
             </div>
-            <div className={classes.ProductRating}>
-              <span className={classes.Left}>
+            <div className="my-4">
+              <span className="float-left flex">
                 {props.productRating}
-                <i className="fa fa-star"></i>
+                <MdOutlineStarRate className="text-2xl mr-1" />
               </span>
 
-              <span className={classes.Right}>
-                <i
-                  className={favoriteIcon}
-                  onClick={props.toggleFavoritesList}
-                ></i>
+              <span className="" onClick={props.toggleFavoritesList}>
+                {favoriteIcon}
               </span>
             </div>
-            <div className={classes.PriceBox}>
-              <p className={classes.ProductPrice}>
+            <div className="">
+              <p className="float-left">
                 {Separate(price)} تومان {oldPrice}
               </p>
-              {discount}
+              <p className="float-right text-white">{discount}</p>
             </div>
-            <div className={classes.PlusAndMinus}>
-              <br />
-              <br />
-              <br />
-              <br />
-              <p style={{ display: plusAndMinusDisplay }}>
+            <div className="mt-24">
+              <div
+                className={[
+                  showplusAndMinus ? "block" : "hidden",
+                  "w-full text-center shadow-md shadow-slate-400 border rounded-xl",
+                ].join(" ")}
+              >
                 <button
-                  className={classes.btnDanger}
+                  className="float-right transition-all mx-3 mt-[-5px] text-3xl bg-transparent border-none text-red-600 hover:text-red-600"
                   onClick={() =>
                     currentProductCount(props.id) === 1
                       ? removeProduct(props.id)
@@ -110,23 +125,28 @@ function Product(props) {
                   -
                 </button>
 
-                <span>{currentProductCount(props.id)}</span>
+                <span className="text-2xl mt-1">
+                  {currentProductCount(props.id)}
+                </span>
 
                 <button
-                  className={classes.btnSuccess}
+                  className="float-left transition-all mx-3 mt-[-5px] text-3xl bg-transparent text-green-600 border-none hover:text-green-700"
                   onClick={() => incrementProduct(props.id)}
                 >
                   +
                 </button>
-              </p>
-              <Button
-                btnClass="btnAddToCart"
-                btnType="Success"
-                clicked={() => addProduct(props.id)}
-                btnDisplay={btnAddToCartDisplay}
-              >
-                افزودن به سبد خرید
-              </Button>
+              </div>
+              <div>
+                <button
+                  className={[
+                    showBtnAddToCart ? "block" : "hidden",
+                    "mx-auto px-6 py-2 transition-all bg-green-600 border-green-600 hover:text-green-700 hover:border-green-700",
+                  ].join(" ")}
+                  onClick={() => addProduct(props.id)}
+                >
+                  افزودن به سبد خرید
+                </button>
+              </div>
             </div>
           </div>
         </div>

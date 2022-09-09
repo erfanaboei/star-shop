@@ -1,18 +1,8 @@
 .ProductCard{
-    width: 24.5%;
-    align-items: center;
-    box-sizing: border-box;
-    transition: 0.3s;
-    display: inline-block;
-    /* margin-top: 20px; */
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    margin-right: 5px;
-    border-radius: 5px;
     background: linear-gradient(to left,rgba(80, 29, 29, 0.6),rgba(136, 4, 4, 0.6)),url("../../../assets/ProductBackground/ProductBackground.jpg");
     background-size: cover;
 }
-.ProductCard a{
+/* .ProductCard a{
     text-decoration: none;
     color: rgb(216, 216, 216);
 }
@@ -88,4 +78,4 @@
 }
 .PlusAndMinus span{
     font-size: 20px;
-}
+} */

@@ -29,9 +29,6 @@ footer{
     border-radius: 8px;
     cursor: pointer;
 }
-.GoTopPageBox button i {
-    margin-right: 10px;
-}
 .BottomFooter{
     display: flex;
 }

@@ -12,14 +12,14 @@ function Slider() {
   SliderData.map((p, index) => {
     slider.push(
       <SwiperSlide key={index}>
-        <img src={p.img} />
+        <img src={p.img} alt="" className="w-full max-h-[500px] rounded-lg"/>
       </SwiperSlide>
     );
   });
 
   return (
     <>
-      <div className={classes.Slider}>
+      <div className="mb-5">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={50}

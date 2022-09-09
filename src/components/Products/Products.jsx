@@ -145,8 +145,8 @@ function Products(props) {
   }
   return (
     <>
-      <div className="Products">
-        {currentPageData}
+      <div className="w-full m-auto mb-5">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">{currentPageData}</div>
         <Modal
           show={isShowModal}
           modalClose={toggleModalHandler}
@@ -154,7 +154,7 @@ function Products(props) {
         >
           {currentProduct}
         </Modal>
-        <div className="paging">
+        <div className="paging ">
           {!isLoaded || pageCount === 0 ? null : (
             <ReactPaginate
               previousLabel={<i className="fa fa-angle-right"></i>}
@@ -166,7 +166,7 @@ function Products(props) {
               pageRangeDisplayed={2}
               onPageChange={pageClickHandler}
               containerClassName={"pagination"}
-              activeClassName={"active"}
+              activeClassName={"bg-black rounded-lg text-zinc-50 dark:bg-zinc-50 dark:text-black"}
             />
           )}
         </div>

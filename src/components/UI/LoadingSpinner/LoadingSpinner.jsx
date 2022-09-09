@@ -7,23 +7,23 @@ function LoadingSpinner() {
   return (
     <>
       <div className={classes.Main}>
-        <Skeleton height="220px" baseColor="black" highlightColor="red" />
+        <Skeleton height="220px" baseColor="transparent" highlightColor="darkgray" />
         <div className={classes.DetailsBox}>
           <div className={classes.TitleBox}>
-            <Skeleton height="30px" baseColor="black" highlightColor="red" />
+            <Skeleton height="30px" baseColor="transparent" highlightColor="darkgray" />
           </div>
           <div className={classes.RatingBox}>
-            <Skeleton height="30px" baseColor="black" highlightColor="red" />
+            <Skeleton height="30px" baseColor="transparent" highlightColor="darkgray" />
           </div>
           <div className={classes.PriceBox}>
-            <Skeleton height="30px" baseColor="black" highlightColor="red" />
+            <Skeleton height="30px" baseColor="transparent" highlightColor="darkgray" />
           </div>
           <div className={classes.ButtonBox}>
             <Skeleton
               height="30px"
               width="80%"
-              baseColor="black"
-              highlightColor="red"
+              baseColor="transparent"
+              highlightColor="darkgray"
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import CartProduct from "./CartProduct/CartProduct";
-import classes from "./CartProducts.module.css";
+// import classes from "./CartProducts.module.css";
 function CartProducts(props) {
   let product = [];
   for (let p = 0; p < props.products.length; p++) {
@@ -30,13 +30,13 @@ function CartProducts(props) {
   }
   return (
     <>
-      <div className={classes.CartProducts}>
-        <div className={classes.CartProductsHeader}>
-          <div className={classes.Right}>
-            <h3>سبد خرید شما</h3>
+      <div className="m-3">
+        <div>
+          <div className="">
+            <h3 className="text-2xl font-bold text-zinc-600 dark:text-zinc-50">سبد خرید شما</h3>
             <span>تعداد کالاها {props.productCount}</span>
           </div>
-          <div className={classes.Left}></div>
+          <div className=""></div>
         </div>
         {product}
       </div>

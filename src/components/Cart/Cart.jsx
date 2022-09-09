@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Cart.module.css";
+// import classes from "./Cart.module.css";
 import CartToolbar from "./CartToolbar/CartToolbar";
 import CartPayment from "./CartPayment/CartPayment";
 import CartProducts from "./CartProducts/CartProducts";
@@ -34,7 +34,7 @@ function Cart(props) {
       cartPrice += price * currentProductCount(p.id);
       purchaseProfit += discountPrice * currentProductCount(p.id);
       payment = (
-        <div className={classes.CartPayment}>
+        <div className="border border-slate-300 rounded-lg max-h-64">
           <CartPayment
             key={index}
             totalPrice={totalPrice}
@@ -46,7 +46,7 @@ function Cart(props) {
       );
 
       product = (
-        <div className={classes.CartDetails}>
+        <div className="ml-3 border border-slate-300 rounded-lg w-full">
           <CartProducts
             key={index}
             productCount={allProductCount}
@@ -64,15 +64,15 @@ function Cart(props) {
     payment = null;
     product = null;
     cartNull = (
-      <div className={classes.cartNull}>
-        <p>سبد خرید شما خالی است</p>
-        <p>از طریق لینک زیر میتوانید محصولات مورد نظرتان را انتخاب کنید</p>
-        <div>
-          <div>
-            <a href="/">تمام محصولات</a>
+      <div className="text-center mx-auto">
+        <p className="text-3xl my-2">سبد خرید شما خالی است</p>
+        <p className="text-2xl my-2">از طریق لینک زیر میتوانید محصولات مورد نظرتان را انتخاب کنید</p>
+        <div className="flex  flex-col">
+          <div className="my-2">
+            <a href="/" className="text-red-300 hover:text-red-500 transition-colors">تمام محصولات</a>
           </div>
-          <div>
-            <a href="/">محصولات تخفیف دار</a>
+          <div className="my-2">
+            <a href="/" className="text-red-300 hover:text-red-500 transition-colors">محصولات تخفیف دار</a>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@ function Cart(props) {
   }
   return (
     <>
-      <div className={classes.Cart}>
+      <div className="w-full flex flex-col m-auto lg:flex-row">
         {product}
         {payment}
         {cartNull}

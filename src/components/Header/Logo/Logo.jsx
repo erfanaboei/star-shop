@@ -1,9 +1,9 @@
 import React from "react";
 import StarLogo from "../../../assets/logo/star-logo.png";
-import "./Logo.css";
+
 function logo(props) {
   return (
-    <div className="Logo">
+    <div className="">
       <img src={StarLogo} alt="" />
     </div>
   );
